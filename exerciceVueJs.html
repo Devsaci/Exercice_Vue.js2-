@@ -10,8 +10,7 @@
 </head>
 <body>
     <div id="app">
-{{chaine.split('').reverse().join('')}} <br>
-{{date.getHours()}}:{{date.getMinutes()}}:{{date.getSeconds()}}
+{{inter ? 'Vrai' :'Faux'}}
 
     </div>
 
@@ -19,8 +18,8 @@
 new Vue({
     el:'#app',
     data:{
-        chaine: 'Premier test exercie vuejs',
-        date: new Date
+       inter: false,
+
     }
         
 })
