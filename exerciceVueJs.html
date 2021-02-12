@@ -10,23 +10,25 @@
 </head>
 <body>
     <div id="app">
-        {{exprssion}}
+{{heure}}
+
+    </div>
+
+<script>
+new Vue({
+    el:'#app',
+    data:{
+hms: new Date()
+
+    },
+    computed:{
+        heure: function(){
+            return this.hms.getHours() + ':' + this.hms.getMinutes() + ':' + this.hms.getSeconds();
+        }
+    }
         
-            </div>
-        
-        <script>
-        new Vue({
-            el:'#app',
-            data:{
-            },
-            computed:{
-                expression: function(){
-                    expressionCalculee;
-                }
-            }
-                
-        })
-        </script>
+})
+</script>
 
 </body>
 </html>
