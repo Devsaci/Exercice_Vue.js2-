@@ -10,7 +10,8 @@
 </head>
 <body>
     <div id="app">
-{{heure}}
+{{heure}}<br>
+{{heure2()}}
 
     </div>
 
@@ -23,6 +24,11 @@ hms: new Date()
     },
     computed:{
         heure: function(){
+            return this.hms.getHours() + ':' + this.hms.getMinutes() + ':' + this.hms.getSeconds();
+        }
+    },
+    methods:{
+        heure2: function(){
             return this.hms.getHours() + ':' + this.hms.getMinutes() + ':' + this.hms.getSeconds();
         }
     }
