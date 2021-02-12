@@ -10,20 +10,23 @@
 </head>
 <body>
     <div id="app">
-{{inter ? 'Vrai' :'Faux'}}
-
-    </div>
-
-<script>
-new Vue({
-    el:'#app',
-    data:{
-       inter: false,
-
-    }
+        {{exprssion}}
         
-})
-</script>
+            </div>
+        
+        <script>
+        new Vue({
+            el:'#app',
+            data:{
+            },
+            computed:{
+                expression: function(){
+                    expressionCalculee;
+                }
+            }
+                
+        })
+        </script>
 
 </body>
 </html>
