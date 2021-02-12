@@ -12,15 +12,17 @@
 
 <body>
     <div id="app">
-        <div v-bind:id="idDuDiv"></div>
+        <p v-text="texte"></p>
+        <p v-html="image"></p>
     </div>
-
 
     <script>
         new Vue({
             el: '#app',
             data: {
-                idDuDiv: 'lediv'
+
+               texte: 'Un petit texte',
+               image: '<img src="https://blog.elao.com/images/posts/headers/vuejs.jpg">'
             }
         })
     </script>
