@@ -10,7 +10,8 @@
 </head>
 <body>
     <div id="app">
-{{chaine.split('').reverse().join('')}} - {{date}}
+{{chaine.split('').reverse().join('')}} <br>
+{{date.getHours()}}:{{date.getMinutes()}}:{{date.getSeconds()}}
 
     </div>
 
@@ -18,8 +19,8 @@
 new Vue({
     el:'#app',
     data:{
-        chaine: 'Premier test exercie',
-        date: Date.now()
+        chaine: 'Premier test exercie vuejs',
+        date: new Date
     }
         
 })
