@@ -12,8 +12,10 @@
 
 <body>
     <div id="app">
-        <p v-text="texte"></p>
-        <p v-html="image"></p>
+nom : <span v-text="personne.nom"></span>,
+prenom : <span v-text="personne.prenom"></span>,
+age : <span v-text="personne.age"></span>
+
     </div>
 
     <script>
@@ -21,8 +23,11 @@
             el: '#app',
             data: {
 
-               texte: 'Un petit texte',
-               image: '<img src="https://blog.elao.com/images/posts/headers/vuejs.jpg">'
+              personne:{
+                  prenom:'Zakaria',
+                  nom:'SACI',
+                  age:'52'
+              }
             }
         })
     </script>
