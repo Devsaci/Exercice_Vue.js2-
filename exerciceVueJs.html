@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,34 +9,22 @@
 
     <title>Sequelette Vue.js</title>
 </head>
+
 <body>
     <div id="app">
-{{heure}}<br>
-{{heure2()}}
-
+        <img v-bind:src="adresse">
     </div>
 
-<script>
-new Vue({
-    el:'#app',
-    data:{
-hms: new Date()
 
-    },
-    computed:{
-        heure: function(){
-            return this.hms.getHours() + ':' + this.hms.getMinutes() + ':' + this.hms.getSeconds();
-        }
-    },
-    methods:{
-        heure2: function(){
-            return this.hms.getHours() + ':' + this.hms.getMinutes() + ':' + this.hms.getSeconds();
-        }
-    }
-        
-})
-</script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                adresse: 'https://blog.elao.com/images/posts/headers/vuejs.jpg'
+            }
+        })
+    </script>
 
 </body>
-</html>
 
+</html>
