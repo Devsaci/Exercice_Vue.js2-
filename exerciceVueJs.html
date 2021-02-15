@@ -28,9 +28,9 @@
         setInterval(function () {
             var d = new Date();
 
-            vm.h = d.getHours();
-            vm.m = d.getMinutes();
-            vm.s = d.getSeconds();
+            vm.h =('0'+d.getHours()).slice(-2);
+            vm.m =('0'+d.getMinutes()).slice(-2);
+            vm.s =('0'+d.getSeconds()).slice(-2);
 
         })
     </script>
