@@ -25,13 +25,14 @@
                 s: ''
             }
         });
-        setInterval(function ()) {
-            var d = new Datte();
-            vm.h = d.getHhours();
-            vm.m = d.getMinutes();
-            vs.d = d.getSeconds();
+        setInterval(function () {
+            var d = new Date();
 
-        }
+            vm.h = d.getHours();
+            vm.m = d.getMinutes();
+            vm.s = d.getSeconds();
+
+        })
     </script>
 
 </body>
