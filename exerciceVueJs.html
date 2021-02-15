@@ -17,16 +17,21 @@
     </div>
 
     <script>
-       var ve =  new Vue({
+        var ve = new Vue({
             el: '#app',
             data: {
-h: '',
-m:'',
-s: ''
+                h: '',
+                m: '',
+                s: ''
             }
         });
+        setInterval(function ()) {
+            var d = new Datte();
+            vm.h = d.getHhours();
+            vm.m = d.getMinutes();
+            vs.d = d.getSeconds();
 
-
+        }
     </script>
 
 </body>
