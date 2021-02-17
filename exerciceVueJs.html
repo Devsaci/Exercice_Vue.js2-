@@ -11,20 +11,19 @@
 </head>
 
 <body>
-    <h2>11. Une horloge au format hh:mm:ss</h2>
+    <h2>Binding bidirectionnel
+    </h2>
    <div id="app">
-    Vous avez choisi {{selection}}<br />
-    <select v-model="selection">
-        <option>Paris</option>
-        <option>Londres</option>
-        <option>Madrid</option>
-    </select>
+    Vous avez choisi 
+    <div style="white-space: pre-line;">{{ multi }}</div>
+    <textarea v-model="multi" cols="40" rows="7"></textarea>
+
     </div>
     <script>
         new Vue({
             el: "#app",
             data: {
-                selection: ""
+                multi: ""
             }
         });
     </script>
