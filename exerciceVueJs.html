@@ -12,29 +12,19 @@
 
 <body>
     <h2>11. Une horloge au format hh:mm:ss</h2>
-    <div id="app">
-        {{h}}:{{m}}:{{s}}
+   <div id="app">
+        <input type="text" placeholder="Nom" v-model="nom" /> Bonjour {{nom}}
     </div>
-
     <script>
         var vm = new Vue({
             el: '#app',
-            data: {
-                h: '',
-                m: '',
-                s: ''
+            data: {         
+             
+                    nom: ""
+                
             }
         });
-        setInterval(function () {
-            var d = new Date();
-
-            vm.h =('0'+d.getHours()).slice(-2);
-            vm.m =('0'+d.getMinutes()).slice(-2);
-            vm.s =('0'+d.getSeconds()).slice(-2);
-
-        })
     </script>
-
 
 </body>
 
