@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
 
     <title>Sequelette Vue.js</title>
 </head>
@@ -13,15 +13,18 @@
 <body>
     <h2>11. Une horloge au format hh:mm:ss</h2>
    <div id="app">
-        <input type="text" placeholder="Nom" v-model="nom" /> Bonjour {{nom}}
+    Vous avez choisi {{selection}}<br />
+    <select v-model="selection">
+        <option>Paris</option>
+        <option>Londres</option>
+        <option>Madrid</option>
+    </select>
     </div>
     <script>
-        var vm = new Vue({
-            el: '#app',
-            data: {         
-             
-                    nom: ""
-                
+        new Vue({
+            el: "#app",
+            data: {
+                selection: ""
             }
         });
     </script>
