@@ -17,7 +17,7 @@
     </h2>
    <div id="app">
     Nombre de clics sur le bouton : {{compteur}}
-    <button v-on:click="compteur++">Cliquez ici</button>
+    <button @click="compteur++">Cliquez ici</button>
     </div>
     <script>
         var vm = new Vue({
