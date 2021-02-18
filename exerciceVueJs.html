@@ -11,21 +11,21 @@
 </head>
 
 <body>
-    <h2> 15. Un tableau dans le modèle
+    <h2> 15.2 Un tableau dans le modèle
     </h2>
    <div id="app">
-    <p>Cochez las cases des langages que vous connaissez : </p>
-    <input type="checkbox" value="HTML" v-model="cases">HTML
-    <input type="checkbox" value="CSS" v-model="cases">CSS
-    <input type="checkbox" value="JavaScript" v-model="cases">JavaScript
-    <p>Cases cochées : {{cases}}</p>
+    <p>Quel langage préférez-vous ?</p>
+        <input type="radio" value="HTML" v-model="lang">HTML
+        <input type="radio" value="CSS" v-model="lang">CSS
+        <input type="radio" value="JavaScript" v-model="lang">JavaScript
+        <p>Langage préféré : {{lang}}</p>
 
     </div>
     <script>
         new Vue({
             el: "#app",
             data: {
-                cases: []
+                lang: ''
             }
         });
     </script>
