@@ -12,22 +12,22 @@
 
 <body> 
 
-    <h2> 19. Fonctions événementielles avec arguments
+    <h2>  20. L'objet $event dans la gestion évènementielle
     </h2>
    <div id="app">
-    <input type="text" placeholder="Nom" v-model="nom" />
-    <input type="button" value="Bonjour" @click="traitement('Bonjour')" />
-    <input type="button" value="Hello" @click="traitement('Hello')" />
+    {{xy}}<br>
+        <img src="http://localhost:3000/images/image.png" 
+        width="300" v-on:mousemove="coord($event)" />
     </div>
     <script>
         var vm = new Vue({
             el: "#app",
             data: {
-                nom: ''
+                xy: ""
             },
             methods: {
-                traitement: function (texte) {
-                    alert(texte + " " + this.nom);
+                coord: function (ev) {
+                    this.xy = "x=" + ev.offsetX + ", y=" + ev.offsetY;
                 }
             }
         });
