@@ -11,19 +11,25 @@
 </head>
 
 <body>
-    <h2>Binding bidirectionnel
+    <h2>14. Utilisation conjointe des directives v-model et v-bind
+
     </h2>
    <div id="app">
-    Vous avez choisi 
-    <div style="white-space: pre-line;">{{ multi }}</div>
-    <textarea v-model="multi" cols="40" rows="7"></textarea>
+    <input type="text" v-model="tex1" v-on:keyup="recopie()" />
+    <input type="text" v-bind:value="tex2" />
 
     </div>
     <script>
         new Vue({
             el: "#app",
             data: {
-                multi: ""
+                tex1: "",
+                tex2: ""
+            },
+            methods: {
+                recopie: function () {
+                    this.tex2 = this.tex1.toUpperCase();
+                }
             }
         });
     </script>
