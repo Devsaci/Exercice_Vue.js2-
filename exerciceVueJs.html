@@ -10,14 +10,14 @@
     <title>Sequelette Vue.js</title>
 </head>
 
-<body>
-    <h2> 18. La propriété methods du ViewModel
+<body> 
 
-
+    <h2> 19. Fonctions événementielles avec arguments
     </h2>
    <div id="app">
     <input type="text" placeholder="Nom" v-model="nom" />
-    <input type="button" value="Cliquez-moi" v-on:click="traitement" />
+    <input type="button" value="Bonjour" @click="traitement('Bonjour')" />
+    <input type="button" value="Hello" @click="traitement('Hello')" />
     </div>
     <script>
         var vm = new Vue({
@@ -26,12 +26,13 @@
                 nom: ''
             },
             methods: {
-                traitement: function () {
-                    alert('Bonjour ' + this.nom);
+                traitement: function (texte) {
+                    alert(texte + " " + this.nom);
                 }
             }
         });
     </script>
+
 
 </body>
 
