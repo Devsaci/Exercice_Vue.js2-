@@ -11,25 +11,21 @@
 </head>
 
 <body>
-    <h2>14. Utilisation conjointe des directives v-model et v-bind
-
+    <h2> 15. Un tableau dans le modèle
     </h2>
    <div id="app">
-    <input type="text" v-model="tex1" v-on:keyup="recopie()" />
-    <input type="text" v-bind:value="tex2" />
+    <p>Cochez las cases des langages que vous connaissez : </p>
+    <input type="checkbox" value="HTML" v-model="cases">HTML
+    <input type="checkbox" value="CSS" v-model="cases">CSS
+    <input type="checkbox" value="JavaScript" v-model="cases">JavaScript
+    <p>Cases cochées : {{cases}}</p>
 
     </div>
     <script>
         new Vue({
             el: "#app",
             data: {
-                tex1: "",
-                tex2: ""
-            },
-            methods: {
-                recopie: function () {
-                    this.tex2 = this.tex1.toUpperCase();
-                }
+                cases: []
             }
         });
     </script>
