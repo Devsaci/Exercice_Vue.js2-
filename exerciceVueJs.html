@@ -11,21 +11,22 @@
 </head>
 
 <body>
-    <h2> 15.2 Un tableau dans le modèle
+    <h2> 16. La directive v-html
+
     </h2>
    <div id="app">
-    <p>Quel langage préférez-vous ?</p>
-        <input type="radio" value="HTML" v-model="lang">HTML
-        <input type="radio" value="CSS" v-model="lang">CSS
-        <input type="radio" value="JavaScript" v-model="lang">JavaScript
-        <p>Langage préféré : {{lang}}</p>
-
+    <div v-html="contenu[0]"></div>
+    <div v-html="contenu[1]"></div>
     </div>
     <script>
-        new Vue({
+        var vm = new Vue({
             el: "#app",
             data: {
-                lang: ''
+                contenu: [
+                    '<img src="images/image.png">',
+                    "<table border><tr><th>Colonne 1</th><th>Colonne 2</th></tr><tr>\
+               <td>1</td><td>2</td></tr><tr><td>3</td><td>4</td></tr></table>"
+                ]
             }
         });
     </script>
