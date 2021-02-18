@@ -11,19 +11,24 @@
 </head>
 
 <body>
-    <h2> 17. Gestion évènementielle
+    <h2> 18. La propriété methods du ViewModel
 
 
     </h2>
    <div id="app">
-    Nombre de clics sur le bouton : {{compteur}}
-    <button @click="compteur++">Cliquez ici</button>
+    <input type="text" placeholder="Nom" v-model="nom" />
+    <input type="button" value="Cliquez-moi" v-on:click="traitement" />
     </div>
     <script>
         var vm = new Vue({
             el: "#app",
             data: {
-                compteur: 0
+                nom: ''
+            },
+            methods: {
+                traitement: function () {
+                    alert('Bonjour ' + this.nom);
+                }
             }
         });
     </script>
