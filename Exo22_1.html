@@ -10,24 +10,22 @@
 </head>
 
 <body>
-    <h2>22_1. Suffixes stop et prevent de Vue
-    </h2>
+    <h2>22_3. Suffixes stop et prevent de Vue</h2>
+
     <div id="app">
-        <form>
-            <input type="text" v-model="nombre">
-            <input type="submit" v-on:click.prevent="traitement($event)">
-        </form>
+        <img v-bind:src="adresse" v-bind:width="larg" v-on:click.left="largeur(200)" v-on:click.right="largeur(100)"
+            v-on:click.middle="largeur(400)" />
     </div>
     <script>
         new Vue({
-            el: '#app',
+            el: "#app",
             data: {
-                nombre: null
+                adresse: "./images/image.png",
+                larg: 300
             },
             methods: {
-                traitement: function (ev) {
-                    //ev.preventDefault();
-                    this.nombre = this.nombre * this.nombre;
+                largeur: function (la) {
+                    this.larg = la;
                 }
             }
         });
