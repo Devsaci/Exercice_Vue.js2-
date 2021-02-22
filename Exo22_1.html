@@ -15,7 +15,7 @@
     <div id="app">
         <form>
             <input type="text" v-model="nombre">
-            <input type="submit" v-on:click="traitement($event)">
+            <input type="submit" v-on:click.prevent="traitement($event)">
         </form>
     </div>
     <script>
@@ -26,7 +26,7 @@
             },
             methods: {
                 traitement: function (ev) {
-                    ev.preventDefault();
+                    //ev.preventDefault();
                     this.nombre = this.nombre * this.nombre;
                 }
             }
