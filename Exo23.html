@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Squelette Vue.js</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js">
+    </script>
+</head>
+
+<body>
+          <h2>23. Ajout de données dans un tableau du Model
+        </h2>
+
+        <div id="app">
+            <p>Quels langages de programmation connaissez-vous ?</p>
+            <input type="text" placeholder="Entrez un langage" v-model="langage" />
+            <input type="button" value="Valider" v-on:click="traitement" /><br />
+            {{liste}}
+        </div>
+        <script>
+            new Vue({
+                el: "#app",
+                data: {
+                    langage: "",
+                    liste: []
+                },
+                methods: {
+                    traitement: function () {
+                        this.liste.push(this.langage);
+                    }
+                }
+            });
+        </script>
+
+</body>
+
+</html>
