@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Squelette Vue.js</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js">
+    </script>
+</head>
+
+<body>
+    <h1>21_1. Les fonctions preventDefault() et stopPropagation() de l'objet $event
+
+    </h1>
+    <div id="app">
+        <form>
+            <input type="number" v-model="nombre" />
+            <input type="submit" v-on:click="carre($event)" />
+        </form>
+    </div>
+    <script>
+        new Vue({
+            el: "#app",
+            data: {
+                nombre: null
+            },
+            methods: {
+                carre: function (ev) {
+                    ev.preventDefault();
+                    this.nombre = this.nombre * this.nombre;
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
