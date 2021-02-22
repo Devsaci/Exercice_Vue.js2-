@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Squelette Vue.js</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js">
+    </script>
+</head>
+
+<body>
+    <h2>25. Arguments dynamiques
+
+    </h2>
+    <div id="app">
+        <input type="radio" value="click" v-model="choix" checked /> Simple clic
+        <input type="radio" value="dblclick" v-model="choix" /> Double clic<br />
+        <img v-bind:src="adresse" v-on:[choix]="change" width="200" />
+    </div>
+    <script>
+        new Vue({
+            el: "#app",
+            data: {
+                adresse: "./images/soleil.jpg",
+                choix: "click"
+            },
+            methods: {
+                change: function () {
+                    //console.log(this.adresse.indexOf("chat"));
+                    if (this.adresse.indexOf("soleil") != -1)
+                        this.adresse = "./images/lune.jpg"
+                    else this.adresse = "./images/soleil.jpg";
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
