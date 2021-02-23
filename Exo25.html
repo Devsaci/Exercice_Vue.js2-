@@ -10,28 +10,25 @@
 </head>
 
 <body>
-    <h2>25. Arguments dynamiques
+    <h2>26. Directive v-for pour parcourir des objets JSON
+
 
     </h2>
     <div id="app">
-        <input type="radio" value="click" v-model="choix" checked /> Simple clic
-        <input type="radio" value="dblclick" v-model="choix" /> Double clic<br />
-        <img v-bind:src="adresse" v-on:[choix]="change" width="200" />
+        <ul v-for="personne in personnes">
+            <li>{{personne.prenom}} {{personne.nom}}, {{personne.age}} ans</li>
+        </ul>
     </div>
     <script>
         new Vue({
             el: "#app",
             data: {
-                adresse: "./images/soleil.jpg",
-                choix: "click"
-            },
-            methods: {
-                change: function () {
-                    //console.log(this.adresse.indexOf("chat"));
-                    if (this.adresse.indexOf("soleil") != -1)
-                        this.adresse = "./images/lune.jpg"
-                    else this.adresse = "./images/soleil.jpg";
-                }
+                personnes: [
+                    { prenom: "Pierric", nom: "Martin", age: 26 },
+                    { prenom: "Annie", nom: "Leclerc", age: 42 },
+                    { prenom: "Kévin", nom: "Li", age: 28 },
+                    { prenom: "Ai", nom: "Li", age: 24 }
+                ]
             }
         });
     </script>
