@@ -10,25 +10,23 @@
 </head>
 
 <body>
-    <h2>26. Directive v-for pour parcourir des objets JSON
-
-
-    </h2>
+    <h3>27. Gestion des événements clavier
+    </h3>
     <div id="app">
-        <ul v-for="personne in personnes">
-            <li>{{personne.prenom}} {{personne.nom}}, {{personne.age}} ans</li>
-        </ul>
+        <input type="text" v-model="texte" autofocus v-on:keyup="action($event)">
+        <input type="button" value="Cliquez ici" v-on:click="action($event)">
     </div>
     <script>
         new Vue({
             el: "#app",
             data: {
-                personnes: [
-                    { prenom: "Pierric", nom: "Martin", age: 26 },
-                    { prenom: "Annie", nom: "Leclerc", age: 42 },
-                    { prenom: "Kévin", nom: "Li", age: 28 },
-                    { prenom: "Ai", nom: "Li", age: 24 }
-                ]
+                texte: ''
+            },
+            methods: {
+                action: function (ev) {
+                    if (ev.key == 'Enter' || ev.type == 'click')
+                        this.texte = this.texte.toUpperCase();
+                }
             }
         });
     </script>
