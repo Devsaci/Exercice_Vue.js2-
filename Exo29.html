@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Squelette Vue.js</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js">
+    </script>
+</head>
+
+<body>
+    <div id="app">
+        <div v-once>Avec v-once : {{nombre}}</div>
+        <div>Sans v-once : {{nombre}}</div>
+        <button v-on:click="plus">Incrémenter</button>
+    </div>
+    <script>
+        new Vue({
+            el: "#app",
+            data: {
+                nombre: 15
+            },
+            methods: {
+                plus: function () {
+                    this.nombre++;
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
